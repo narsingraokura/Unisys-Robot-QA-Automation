@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<projectConfiguration>
+    <configVersion>1.0</configVersion>
+    <relativeTo>WORKSPACE</relativeTo>
+    <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Users/kuraroa/Documents/Hawaii-Project/Python-Vitual-Env/RobotPractice1/lib/site-packages"/>
+    <referencedLibrary type="PYTHON" name="FakerLibrary" path="C:/Users/kuraroa/Documents/Hawaii-Project/Python-Vitual-Env/RobotPractice1/lib/site-packages"/>
+    <referencedLibrary type="PYTHON" name="ExcelLibrary" path="KOLEA-AQUA"/>
+    <referencedLibrary type="PYTHON" name="Variables" path="KOLEA-AQUA"/>
+    <pythonpath/>
+    <classpath/>
+    <excludedForValidation/>
+    <isValidatedFileSizeCheckingEnabled>true</isValidatedFileSizeCheckingEnabled>
+    <validatedFileMaxSize>1024</validatedFileMaxSize>
+    <isReferencedLibrariesAutoReloadEnabled>true</isReferencedLibrariesAutoReloadEnabled>
+    <isReferencedLibrariesAutoDiscoveringEnabled>true</isReferencedLibrariesAutoDiscoveringEnabled>
+    <isLibrariesAutoDiscoveringSummaryWindowEnabled>false</isLibrariesAutoDiscoveringSummaryWindowEnabled>
+</projectConfiguration>
