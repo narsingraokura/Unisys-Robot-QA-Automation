@@ -8,6 +8,7 @@ Library         String
 Library         ExcelLibrary
 Library         FakerLibrary
 Library         Variables
+Library         DateTime    
 
 
 
@@ -50,10 +51,15 @@ Close Browsers
 Maximize Window
     maximize browser window
 
+
 Save Session Details
     ${conn_url}  ${session_id}=    Return Driver Props
     ${file_line}=       catenate    ${conn_url} ${session_id}
     Create File     ${CURDIR}/Session.txt   ${file_line}
+
+Get Session Id
+    ${conn_url}  ${session_id}=    Return Driver Props
+    [Return]     ${session_id}
 
 Get Session Details
     ${file_line}=       Get File            ${CURDIR}/Session.txt
@@ -65,7 +71,10 @@ Capture and Close
 
 
 Capture Screen
-    capture page screenshot
+    #[Arguments]    ${filename}
+    Set Screenshot Directory    ${CURDIR}/Screenshots    
+    Capture Page Screenshot
+    Log To Console  ${\n}Screenshot
 
 
 Click OK on Alert
