@@ -3,10 +3,22 @@
 Resource     KOLEA_Key_Words.robot
 
 *** Variable ***
+${File_Name_LifeRay_Accounts}    
+${Value_Update_Date}    
+${Value_Creation_Date}    
+${Value_Session_Id}    
+${Value_N}    
+${Value_Is_Counselor}    
+${Value_Password}    
+${Value_User_Name}    
 ${This_LifeRay_User_Name}
 ${This_LifeRay_Password}
 ${LifeRay_Logins}
+&{LifeRay_New_User}
+
 *** Keywords ***
+    
+
 Click Pre-Assessment
     Click Element                   ${Path_LifeRay_Pre_Assess_Button}
     Select iframe
@@ -69,6 +81,7 @@ Logo Should Be Market Place
     Page Should Contain Element     ${Path_Hlth_Ins_Mrkt_Logo}
 Should Have Apply Now Button
     Page Should Contain Element     ${Path_Apply_Now}
+    
 Enter Account Information
     [Arguments]             ${Inp_First_Name}=${Random_First_Name}
     ...                     ${Inp_Last_Name}=${Random_Last_Name}
@@ -99,7 +112,40 @@ Enter Account Information
     Select First Option Of Security Question3
     Input Text              ${Path_Create_Acc_answer3}          ${Value_answer3}
     Select No For Registering As A Counselor
+    ${Inp_Q1}=    Get Security Question1
+    ${Inp_Q2}=    Get Security Question2
+    ${Inp_Q3}=    Get Security Question3
     Click Create Account Button
+    Set To Dictionary    ${LifeRay_New_User}    ${Value_First_Name}=${Inp_First_Name}      ${Value_Last_Name}=${Inp_Last_Name}
+    Set To Dictionary    ${LifeRay_New_User}    ${Value_Last_Name}=${Inp_Last_Name}        ${Value_emailAddress}=${Inp_Email}
+    Set To Dictionary    ${LifeRay_New_User}    ${Value_User_Name}=${Inp_User_Name}        ${Value_Password}=${Inp_password}
+    Set To Dictionary    ${LifeRay_New_User}    ${Value_q1}=${Inp_Q1}    ${Value_q2}=${Inp_Q2}    ${Value_q3}=${Inp_Q3}
+    Set To Dictionary    ${LifeRay_New_User}    ${Value_answer1}=${Value_answer1}          ${Value_answer2}=${Value_answer2}
+    Set To Dictionary    ${LifeRay_New_User}    ${Value_answer3}=${Value_answer3}          ${Value_Is_Counselor}=${Value_N}
+    ${Session_id}=    Get Session Id
+    Set To Dictionary    ${LifeRay_New_User}    ${Value_Session_Id}=${Session_id}          
+    ${Value_Curr_Date}=    Get Current Date       
+    Set To Dictionary    ${LifeRay_New_User}    ${Value_Creation_Date}= ${Value_Curr_Date}    ${Value_Update_Date}= ${Value_Curr_Date}
+    [Return]    ${LifeRay_New_User}
+
+
+#######################################################################################################################
+    
+Write LifeRay Account Details To Excel
+    [Arguments]    ${LifeRay_New_User}
+    
+    Open Excel  ${File_Name_LifeRay_Accounts}
+    ${Names}=      Get Sheet Names
+    Log     ${Names}  
+    Log     ${LifeRay_New_User}
+    ${Col}=    Get Column Count    Accounts
+    ${Row}=    Get Row Count    Accounts
+    Put Number To Cell    Accounts    ${Col}    ${Row}    ${Col}
+    ${Inp_User_Name}=    Get From Dictionary    ${LifeRay_New_User}	   ${Value_User_Name}
+    Put String To Cell    Accounts    ${Col}    ${Row}    ${Inp_User_Name}
+    Save Excel    ${File_Name_LifeRay_Accounts}
+    
+        
 ########################################################################################################################
 ###################################                 Selections                        ##################################
 ########################################################################################################################
@@ -111,6 +157,20 @@ Select First Option Of Security Question3
     Select From List By Index   ${Path_Create_Acc_Security_q3}   ${Value_str_1}
 Select No For Registering As A Counselor
     Click Element       ${Path_Create_Acc_As_Counselor_No}
+
+Get Security Question1
+    ${res}=    Get Selected List Value       ${Path_Create_Acc_Security_q1}
+    [Return]    ${res}
+    
+Get Security Question2
+    ${res}=    Get Selected List Value       ${Path_Create_Acc_Security_q2}
+    [Return]    ${res}
+
+
+Get Security Question3
+    ${res}=    Get Selected List Value       ${Path_Create_Acc_Security_q3}
+    [Return]    ${res}
+    
 Click Create Account Button
     Click Button With Name      ${Value_koleaCreateAccount}
 ########################################################################################################################
