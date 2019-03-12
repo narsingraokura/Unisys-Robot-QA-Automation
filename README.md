@@ -3,3 +3,4 @@ This project is to drive the development work of QA automation in collaboration 
 
 #Pushing to Git for Review
 #Making changes to readme.
+Committing
