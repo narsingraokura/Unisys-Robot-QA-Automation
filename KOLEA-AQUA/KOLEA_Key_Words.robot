@@ -5,14 +5,13 @@ Library         SeleniumLibrary
 Library         Collections
 Library         OperatingSystem
 Library         String
-Library         ExcelLibrary
 Library         FakerLibrary
-Library         Variables
+
 
 
 
 *** Keywords ***    
-
+   
 
 Do Nothing
     No Operation
@@ -121,3 +120,19 @@ Should Have Image Large KOLEA Logo
 	
 Wait for LifeRay Home Page
     Wait Until Element Is Visible   ${Path_LifeRay_Home_Page_Footer}                    ${Wait_10_Sec}
+    
+Random Alien Number
+    ${Random_Alien_Number}=    Random Number    digits=9
+    [Return]    ${Random_Alien_Number}
+Random Passport Number
+    ${Random_Passport_Number}=    Random Number    digits=9
+    [Return]    ${Random_Passport_Number}
+Random Nine Four
+    ${Random_Nine_Four}=    Random Number        digits =10
+    [Return]   ${Random_Nine_Four} 
+Int Number
+    ${Random_Integer}=    Random Int        min=9000    max=9999
+    [Return]    ${Random_Integer}      
+Random Income
+    ${Random_Income}=    Random Int    min=650    max=5000
+    [Return]    ${Random_Income}
