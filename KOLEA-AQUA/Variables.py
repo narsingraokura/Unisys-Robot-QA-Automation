@@ -173,7 +173,9 @@ URL_Hawaii_Large_Logo      =        "https://uat02web.dhsie.hawaii.gov/hawaiiHIX
 URL_PCI 				   =		"file:///C:/Users/giriganv/OneDrive%20-%20Unisys/HAWAII_PROJECT/Automation/SmokeTest/Smoke-Test-Suite/Smoke-Test-Suite/Scenario-1-Liferay-Portal/Step7-KOLEA-Public-Portal-Primary-Contact-Info-Page.html"
 URL_PADETAILS              =        "file:///C:/Users/giriganv/OneDrive%20-%20Unisys/HAWAII_PROJECT/Automation/SmokeTest/Smoke-Test-Suite/Smoke-Test-Suite/Scenario-1-Liferay-Portal/Step8-KOLEA-Public-Portal-Primary-applicant-Details.html"
 URL_HHDETAILS			   =        "file:///C:/Users/giriganv/OneDrive%20-%20Unisys/HAWAII_PROJECT/Automation/SmokeTest/Smoke-Test-Suite/Smoke-Test-Suite/Scenario-1-Liferay-Portal/Step10-KOLEA-Public-Portal-Household-Details.html"
-
+URL_FHC                    =		"file:///C:/Users/giriganv/OneDrive%20-%20Unisys/HAWAII_PROJECT/Automation/SmokeTest/Smoke-Test-Suite/Smoke-Test-Suite/Scenario-1-Liferay-Portal/Step14-KOLEA-Public-Portal-Family-Health-Care.html"
+URL_AuthorizedRep          =        "file:///C:/Users/giriganv/OneDrive%20-%20Unisys/HAWAII_PROJECT/Automation/SmokeTest/Smoke-Test-Suite/Smoke-Test-Suite/Scenario-1-Liferay-Portal/Step15-KOLEA-Public-Authorized-Representative.html"
+URL_ECMUpload			   =		"file:///C:/Users/giriganv/OneDrive%20-%20Unisys/HAWAII_PROJECT/Automation/SmokeTest/Smoke-Test-Suite/Smoke-Test-Suite/Scenario-4-LifeRay-ECM/Step1-KOLEA-Public-Portal-Doc-Upload-Page.html"
 #*****************************************************************************************#
 #                                          File Name                                      #
 #*****************************************************************************************#
@@ -817,6 +819,223 @@ Path_LFRY_HHD_P2_Add_Person_1=                                             "//in
 Path_LFRY_HHD_P2_Save_And_Exit=                                           "//input[@title='Save & Exit']"
 Path_LFRY_HHD_P2_Save_And_Back=                                          "//input[@title='Back']"
 Path_LFRY_HHD_P2_Save_And_Next=                                         "//input[@title='Next']"
+
+##########################Family Health Care
+Path_LFRY_FHC_Screen                                                  ="//li[@title= ' Family Health Coverage ']" 
+Path_LFRY_FHC_Title                                                   ="//h2[@class='title_head_green']"
+Path_LFRY_FHC_No_If_No_Skip_To_Next_Step                              ="//input[@id='enrolledInHealthCoverageYesNoCBNoCheckbox']"
+Path_LFRY_FHC_Yes_If_Yes_Answer_The_Follng_Que                        ="//input[@id='enrolledInHealthCoverageYesNoCBYesCheckbox']"
+Path_LFRY_FHC_App_Enrld_In_Hlth_Cvrg_Now_If_No_Next                   ="//input[@id='familyHealthCovgSkipButton']"
+Path_LFRY_FHC_Is_P3_Enrld_In_Hlth_Cvrg_Now_If_No                      ="//input[@id='currentlyEnrolledIndNo0']"
+Path_LFRY_FHC_Is_P3_Enrld_In_Hlth_Cvrg_Now_If_Yes                     = "//input[@id='currentlyEnrolledIndYes0']"
+Path_LFRY_FHC_P3_Type_Of_Coverage                                     = "//select[@id='houseHold.listOfContacts.contact[0].listOfOtherHealthCoverages.otherHealthCoverage[0].otherHealthCoverageTypeCode']"
+Path_LFRY_FHC_P3_Type_Of_Coverage_If_Employer_Insurance               ="//select[@id='houseHold.listOfContacts.contact[0].listOfOtherHealthCoverages.otherHealthCoverage[0].otherHealthCoverageTypeCode']//option[2]"
+
+Path_LFRY_FHC_P3_Policy_Name                                             ="//input[@id='houseHold.listOfContacts.contact[0].listOfOtherHealthCoverages.otherHealthCoverage[0].otherHealthCoveragePolicyName']"
+Path_LFRY_FHC_P3_Policy_Number                                           ="//input[@id='currentlyEnrolledIndYes0']/following::input[3]"
+Path_LFRY_FHC_P3_Policy_Start_Date                                       ="//input[@id='houseHold.listOfContacts.contact[0].listOfOtherHealthCoverages.otherHealthCoverage[0].otherHealthCoverageStartDate']"
+Path_LFRY_FHC_P3_Policy_End_Date                                         ="//input[@id='houseHold.listOfContacts.contact[0].listOfOtherHealthCoverages.otherHealthCoverage[0].otherHealthCoverageEndDate']"
+Path_LFRY_FHC_P3_Includes_Medical_Care_If_Yes                            ="//input[@id='cygj']"
+Path_LFRY_FHC_P3_Includes_Medical_Care_If_No                             ="//input[@id='adsv']"
+Path_LFRY_FHC_P3_Includes_Dental_Care_If_Yes                             ="//input[@id='pliw']"
+Path_LFRY_FHC_P3_Includes_Dental_Care_If_No                              ="//input[@id='cnlf']"
+Path_LFRY_FHC_P3_Includes_Vision_Care_If_Yes                             ="//input[@id='zsjc']"
+Path_LFRY_FHC_P3_Includes_Vision_Care_If_No                              ="//input[@id='jfee']"
+
+Path_LFRY_FHC_P3_Is_This_A_Limited_Benefit_Plan_If_Yes                    ="//input[@id='bnoh']"
+Path_LFRY_FHC_P3_Is_This_A_Limited_Benefit_Plan_If_No                     ="//input[@id='cxtz']"
+Path_LFRY_FHC_P3_Add_Coverage                                             ="//input[@id='cxtz']/following::input[2]"
+Path_LFRY_FHC_P3_Add_Coverage_Type_Of_Coverage                            ="//b[contains(text(), 'Is psdzerothree automation enrolled in health coverage now?')]//following::select[@title='Type of Coverage(s)*']"
+Path_LFRY_FHC_P3_Add_Coverage_Type_Of_Coverage_If_Employer_Insurance        ="//b[contains(text(), 'Is psdzerothree automation enrolled in health coverage now?')]//following::select[@title='Type of Coverage(s)*']/option[2]"
+Path_LFRY_FHC_P3_Add_Coverage_Policy_Name                                    = "//input[@id='cxtz']/following::input[3]"
+
+Path_LFRY_FHC_P3_Add_Coverage_Policy_Number                                   ="//input[@id='cxtz']/following::input[4]"
+Path_LFRY_FHC_P3_Add_Coverage_Policy_Start_Date                               ="//input[@id='cxtz']/following::input[5]"
+Path_LFRY_FHC_P3_Add_Coverage_Policy_End_Date                                 ="//input[@id='cxtz']/following::input[6]"
+
+Path_LFRY_FHC_P3_Add_Coverage_Includes_Medical_Care_If_Yes                     ="//input[@id='cxtz']/following::input[7]"
+Path_LFRY_FHC_P3_Add_Coverage_Includes_Medical_Care_If_No                     ="//input[@id='cxtz']/following::input[8]"
+
+Path_LFRY_FHC_P3_Add_Coverage_Includes_Dental_Care_If_Yes    	              ="//input[@id='cxtz']/following::input[9]"
+Path_LFRY_FHC_P3_Add_Coverage_Includes_Dental_Care_If_No                       ="//input[@id='cxtz']/following::input[10]"
+
+Path_LFRY_FHC_P3_Add_Coverage_Includes_Vision_Care_If_Yes                     ="//input[@id='cxtz']/following::input[11]"
+Path_LFRY_FHC_P3_Add_Coverage_Includes_Vision_Care_If_No                      ="//input[@id='cxtz']/following::input[12]"
+
+Path_LFRY_FHC_P3_Add_Coverage_Is_This_A_Limited_Benefit_Plan_If_Yes           ="//input[@id='cxtz']/following::input[13]"
+Path_LFRY_FHC_P3_Add_Coverage_Is_This_A_Limited_Benefit_Plan_If_No            ="//input[@id='cxtz']/following::input[14]"
+
+Path_LFRY_P3_FHC_Remove_Coverage                                             ="//input[@id='cxtz']/following::input[16]"
+
+Path_LFRY_FHC_Is_P4_Enrld_In_Hlth_Cvrg_Now_If_No                             ="//input[@id='currentlyEnrolledIndNo1']"
+Path_LFRY_FHC_Is_P4_Enrld_In_Hlth_Cvrg_Now_If_Yes                            ="//input[@id='currentlyEnrolledIndYes1']"
+
+Path_LFRY_FHC_P4_Type_Of_Coverage                                            ="//select[@id='houseHold.listOfContacts.contact[1].listOfOtherHealthCoverages.otherHealthCoverage[0].otherHealthCoverageTypeCode']"
+Path_LFRY_FHC_P4_Type_Of_Coverage_If_Employer_Insurance                      ="//select[@id='houseHold.listOfContacts.contact[1].listOfOtherHealthCoverages.otherHealthCoverage[0].otherHealthCoverageTypeCode']//option[2]"
+Path_LFRY_FHC_P4_Policy_Name                                                 ="//input[@id='currentlyEnrolledIndYes1']/following::input[2]"
+Path_LFRY_FHC_P4_Policy_Number                                               ="//input[@id='currentlyEnrolledIndYes1']/following::input[3]"
+
+Path_LFRY_FHC_P4_Policy_Start_Date                                          ="//input[@id='currentlyEnrolledIndYes1']/following::input[4]"
+Path_LFRY_FHC_P4_Policy_End_Date                                            ="//input[@id='currentlyEnrolledIndYes1']/following::input[5]"
+
+Path_LFRY_FHC_P4_Includes_Medical_Care_If_Yes                              ="//input[@id='zpzr']"
+Path_LFRY_FHC_P4_Includes_Medical_Care_If_No                               ="//input[@id='xpzc']"
+
+
+Path_LFRY_FHC_P4_Includes_Dental_Care_If_Yes                               ="//input[@id='cpin']"
+Path_LFRY_FHC_P4_Includes_Dental_Care_If_No    	                           ="//input[@id='jkus']"
+
+Path_LFRY_FHC_P4_Includes_Vision_Care_If_Yes                               ="//input[@id='gkkm']"
+#Path_LFRY_FHC_P4_Includes_Vision_Care_If_No							   ="//input[@id='erhu']"
+Path_LFRY_FHC_P4_Is_This_A_Limited_Benefit_Plan_If_Yes                     ="//input[@id='qnzv']"
+Path_LFRY_FHC_P4_Is_This_A_Limited_Benefit_Plan_If_No                      ="//input[@id='ojnb']"
+
+
+
+Path_LFRY_FHC_P4_Add_Coverage                                              ="//input[@id='ojnb']/following::input[2]"
+
+
+Path_LFRY_FHC_P4_Add_Coverage_Type_Of_Coverage                              ="//input[@id='ojnb']/following::input[2]/following::select[1]"
+Path_LFRY_FHC_P4_Add_Coverage_Type_Of_Coverage_If_Employer_Insurance        ="//input[@id='ojnb']/following::input[2]/following::select[1]/option[2]"
+
+
+Path_LFRY_FHC_P4_Add_Coverage_Policy_Name                                     ="//input[@id='ojnb']/following::input[3]"
+Path_LFRY_FHC_P4_Add_Coverage_Policy_Number                                   ="//input[@id='ojnb']/following::input[4]"
+Path_LFRY_FHC_P4_Add_Coverage_Policy_Start_Date                               ="//input[@id='ojnb']/following::input[5]"
+Path_LFRY_FHC_P4_Add_Coverage_Policy_End_Date                                 ="//input[@id='ojnb']/following::input[6]"
+
+Path_LFRY_FHC_P4_Add_Coverage_Includes_Medical_Care_If_Yes                     ="//input[@id='ojnb']/following::input[7]"
+Path_LFRY_FHC_P4_Add_Coverage_Includes_Medical_Care_If_No                      ="//input[@id='ojnb']/following::input[8]"
+
+Path_LFRY_FHC_P4_Add_Coverage_Includes_Dental_Care_If_Yes                      ="//input[@id='ojnb']/following::input[9]"
+Path_LFRY_FHC_P4_Add_Coverage_Includes_Dental_Care_If_No                       ="//input[@id='ojnb']/following::input[10]"
+
+Path_LFRY_FHC_P4_Add_Coverage_Includes_Vision_Care_If_Yes                     ="//input[@id='ojnb']/following::input[11]"
+Path_LFRY_FHC_P4_Add_Coverage_Includes_Vision_Care_If_No                      ="//input[@id='ojnb']/following::input[12]"
+
+Path_LFRY_FHC_P4_Add_Coverage_Is_This_A_Limited_Benefit_Plan_If_Yes             ="//input[@id='ojnb']/following::input[13]"
+Path_LFRY_FHC_P4_Add_Coverage_Is_This_A_Limited_Benefit_Plan_If_No              ="//input[@id='ojnb']/following::input[14]"
+
+
+Path_LFRY_P4_FHC_Remove_Coverage                                                 ="//input[@id='ojnb']/following::input[16]"
+Path_LFRY_FHC_Is_P5_Enrld_In_Hlth_Cvrg_Now_If_No                                 ="//input[@id='currentlyEnrolledIndNo2']"
+Path_LFRY_FHC_Is_P5_Enrld_In_Hlth_Cvrg_Now_If_Yes                                ="//input[@id='currentlyEnrolledIndYes2']"
+Path_LFRY_FHC_P5_Type_Of_Coverage                                                ="//select[@id='houseHold.listOfContacts.contact[2].listOfOtherHealthCoverages.otherHealthCoverage[0].otherHealthCoverageTypeCode']"
+Path_LFRY_FHC_P5_Type_Of_Coverage_If_Employer_Insurance                          ="//select[@id='houseHold.listOfContacts.contact[2].listOfOtherHealthCoverages.otherHealthCoverage[0].otherHealthCoverageTypeCode']/option[2]"
+
+Path_LFRY_FHC_P5_Policy_Name                                                     ="//input[@id='currentlyEnrolledIndYes2']/following::input[2]"
+Path_LFRY_FHC_P5_Policy_Number                                                   ="//input[@id='currentlyEnrolledIndYes2']/following::input[3]"
+Path_LFRY_FHC_P5_Policy_Start_Date                                               ="//input[@id='currentlyEnrolledIndYes2']/following::input[4]"
+Path_LFRY_FHC_P5_Policy_End_Date                                                 ="//input[@id='currentlyEnrolledIndYes2']/following::input[5]"
+
+Path_LFRY_FHC_P5_Includes_Medical_Care_If_Yes                                     ="//input[@id='mrha']"
+Path_LFRY_FHC_P5_Includes_Medical_Care_If_No                                      ="//input[@id='dtvb']"
+
+Path_LFRY_FHC_P5_Includes_Dental_Care_If_Yes                                      ="//input[@id='fvpp']"
+Path_LFRY_FHC_P5_Includes_Dental_Care_If_No                                       ="//input[@id='rybp']"
+
+Path_LFRY_FHC_P5_Includes_Vision_Care_If_Yes                                     ="//input[@id='izrj']"
+Path_LFRY_FHC_P5_Includes_Vision_Care_If_No                                      ="//input[@id='urnp']"
+
+Path_LFRY_FHC_P5_Is_This_A_Limited_Benefit_Plan_If_Yes                             ="//input[@id='suea']"
+Path_LFRY_FHC_P5_Is_This_A_Limited_Benefit_Plan_If_No                              ="//input[@id='pokq']"
+
+Path_LFRY_FHC_P5_Add_Coverage                                                     ="//input[@id='pokq']/following::input[@title='Add Coverage']"
+Path_LFRY_FHC_P5_Add_Coverage_Type_Of_Coverage                                    ="//input[@id='pokq']/following::select[1]"
+Path_LFRY_FHC_P5_Add_Coverage_Type_Of_Coverage_If_Employer_Insurance              ="//input[@id='pokq']/following::select[1]/option[2]"
+
+
+Path_LFRY_FHC_P5_Add_Coverage_Policy_Name                                         ="//input[@id='pokq']/following::input[3]"
+Path_LFRY_FHC_P5_Add_Coverage_Policy_Number                                       ="//input[@id='pokq']/following::input[4]"
+Path_LFRY_FHC_P5_Add_Coverage_Policy_Start_Date                                   ="//input[@id='pokq']/following::input[5]"
+Path_LFRY_FHC_P5_Add_Coverage_Policy_End_Date                                     ="//input[@id='pokq']/following::input[6]"
+
+Path_LFRY_FHC_P5_Add_Coverage_Includes_Medical_Care_If_Yes                        ="//input[@id='pokq']/following::input[7]"
+Path_LFRY_FHC_P5_Add_Coverage_Includes_Medical_Care_If_No                         ="//input[@id='pokq']/following::input[8]"
+
+Path_LFRY_FHC_P5_Add_Coverage_Includes_Dental_Care_If_Yes                         ="//input[@id='pokq']/following::input[9]"
+Path_LFRY_FHC_P5_Add_Coverage_Includes_Dental_Care_If_No                          ="//input[@id='pokq']/following::input[10]"
+
+Path_LFRY_FHC_P5_Add_Coverage_Includes_Vision_Care_If_Yes                         ="//input[@id='pokq']/following::input[11]"
+Path_LFRY_FHC_P5_Add_Coverage_Includes_Vision_Care_If_No                          ="//input[@id='pokq']/following::input[12]"
+
+Path_LFRY_FHC_P5_Add_Coverage_Is_This_A_Limited_Benefit_Plan_If_Yes     	        ="//input[@id='pokq']/following::input[13]"
+Path_LFRY_FHC_P5_Add_Coverage_Is_This_A_Limited_Benefit_Plan_If_No     	         ="//input[@id='pokq']/following::input[14]"
+
+Path_LFRY_P5_FHC_Remove_Coverage                                                 ="//input[@id='pokq']/following::input[16]"
+
+
+Path_LFRY_FHC_Save_Exit     	                                                    ="//input[@id='familyHealthCoverageFormSaveAndExitId']"
+Path_LFRY_FHC_Back     	                                                            ="//input[@title='Back']"
+Path_LFRY_FHC_Next     	                                                            ="//input[@id='familyHealthCoverageFormNextId']"
+
+###########################AuthorizedRepresentative
+Path_LFRY_AR_Title=                                                                 "//h2[contains(text(),' Authorized Representative ')]"
+
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_No=                      "//input[@id='authRepRequiredYesNoCBNoCheckbox']"
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Nxt=                     "//input[@id='authorizedRepSkipButton']"
+
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y=                       "//input[@id='authRepRequiredYesNoCBYesCheckbox']"
+
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_Frst_Name=             "//input[@title=' First Name* ']"
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_Mdle_Name=             "//input[@title=' Middle Name ']"
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_Lst_Name=              "//input[@title=' Last Name* ']"
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_Suffix=                "//select[@title=' Suffix ']"
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_Suffix_II=             "//select[@title=' Suffix ']/option[2]"
+
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_Addrs_L1=              "//input[contains(@title,' Address Line 1* ')]"
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_Aprtmnt=               "//input[contains(@title,' Apartment or suite number ')]"
+
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_City=                  "//input[@title=' City* ']"
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_State=                 "//select[@id='stateFirst']"
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_State_HI=              "//select[@id='stateFirst']/option[@value='HI']"
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_ZCode=                 "//input[@id='zipCodeFirst']"
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_County=                "//select[@title=' County ']"
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_Cnty_Hawaii=           "//select[@title=' County ']/option[@value='Hawaii']"
+
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_Phone=                 "//input[@title=' Phone Number* ']"
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_Orgnztn_Name=          "//input[@title=' Organization Name ']"
+Path_LFRY_AR_Would_You_Like_To_Include_Authrzd_Reprsntatv_Y_ID_Nmbr=               "//input[@title=' ID Number (If applicable) ']"
+
+Path_LFRY_AR_Save_And_Exit															=         "//input[@title='Save & Exit']"
+Path_LFRY_AR_Back_Button															=         "//input[@title='Back']"
+Path_LFRY_AR_Next_Button															=         "//input[@id='authorizedRepNextId']"
+
+########################ECM FileUpload
+
+Path_PP_Doc_Upload_Page_Sign_Out 											= 	"//a[@title='Sign Out']"
+
+Path_PP_Doc_Upload_Page_Skip_To_Content 									= 	"//a[@id='skip-to-content']"                                    
+
+Path_PP_Doc_Upload_Page_Your_Account_Screen 								= 	"//div[contains(@class,'align')]"
+Path_PP_Doc_Upload_Page_My_Document_Screen 									= 	"//li[@title=' My Documents ']"
+Path_PP_Doc_Upload_Page_Upload_Screen 										= 	"//li[@title=' Upload ']"
+Path_PP_Doc_Upload_Page_Upload_Frm_Your_Computer_Title						= 	"//div[contains(@class,'subhead')]"
+
+Path_PP_Doc_Upload_Page_What_Does_This_File_Contain							= 	"//select[@id='documentClassName']"
+
+Path_PP_Doc_Upload_Page_What_Does_This_File_Contain_If_VD 					=  	"//select[@id='documentClassName']/option[1]"
+
+Path_PP_Doc_Upload_Page_If_VD_File_Contains 								= 	"//select[@id='propertySet.documentType0']"
+Path_PP_Doc_Upload_Page_If_VD_File_Contains_401K 							= 	"//select[@id='propertySet.documentType0']/option[2]"
+
+Path_PP_Doc_Upload_Page_If_VD_File_Contains_For								= 	"//select[@id='propertySet.clientID0']"
+Path_PP_Doc_Upload_Page_If_VD_File_Contains_For_Option_2 					= 	"//select[@id='propertySet.clientID0']/option[2]"
+Path_PP_Doc_Upload_Page_If_VD_Doc_For_Another_Per_In_This_Case_Yes			=   "//input[@title='Yes']"
+Path_PP_Doc_Upload_Page_VD_If_Yes_File_Contains 							= 	"//select[@id='propertySet.documentType0']/following::select[2]"
+Path_PP_Doc_Upload_Page_VD_If_Yes_File_Contains_401K 						= 	"//select[@id='propertySet.documentType0']/following::select[2]/option[2]"
+
+Path_PP_Doc_Upload_Page_VD_If_Yes_File_Contains_For                         = 	"//select[@id='propertySet.clientID0']/following::select[2]"
+Path_PP_Doc_Upload_Page_VD_If_Yes_File_Contains_For_Option_2			    = 	"//select[@id='propertySet.clientID0']/following::select[2]/option[2]"
+Path_PP_Doc_Upload_Page_Verify_Document_If_Delete 							= 	"//input[@title='Delete']"
+Path_PP_Doc_Upload_Page_What_Does_This_File_Contain_If_Form 				=  	"//select[@id='documentClassName']/option[2]"
+Path_PP_Doc_Upload_Page_Form_Select_The_Form 								= 	"//select[@id='DocumentSelected']"
+Path_PP_Doc_Upload_Page_Form_If_Eligibility_Determination_Form 				= 	"//select[@id='DocumentSelected']/option[2]"
+Path_PP_Doc_Upload_Page_File_Choosen 										=	"//input[@id='fpImages']"
+Path_PP_Doc_Upload_Page_Terms_And_Conditions 								= 	"//input[@id='agreeCheckbox']"
+
+Path_PP_Doc_Upload_Page_Cancel 												=   "//input[@title='Cancel']"
+Path_PP_Doc_Upload_Page_Upload 												=   "//input[@type='submit']"
 
 
 

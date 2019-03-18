@@ -136,3 +136,7 @@ Int Number
 Random Income
     ${Random_Income}=    Random Int    min=650    max=5000
     [Return]    ${Random_Income}
+    
+Random Policy Number
+    ${Random_Policy_Number}=    Random Number    digits=9
+    [Return]   ${Random_Policy_Number} 
