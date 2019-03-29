@@ -16,6 +16,7 @@ from datetime import date as _date
 from robot.libraries.BuiltIn import BuiltIn
 
 
+
 def Return_Driver_Props():
     seLib = BuiltIn().get_library_instance('SeleniumLibrary')
 
@@ -176,6 +177,8 @@ URL_HHDETAILS			   =        "file:///C:/Users/giriganv/OneDrive%20-%20Unisys/HAW
 URL_FHC                    =		"file:///C:/Users/giriganv/OneDrive%20-%20Unisys/HAWAII_PROJECT/Automation/SmokeTest/Smoke-Test-Suite/Smoke-Test-Suite/Scenario-1-Liferay-Portal/Step14-KOLEA-Public-Portal-Family-Health-Care.html"
 URL_AuthorizedRep          =        "file:///C:/Users/giriganv/OneDrive%20-%20Unisys/HAWAII_PROJECT/Automation/SmokeTest/Smoke-Test-Suite/Smoke-Test-Suite/Scenario-1-Liferay-Portal/Step15-KOLEA-Public-Authorized-Representative.html"
 URL_ECMUpload			   =		"file:///C:/Users/giriganv/OneDrive%20-%20Unisys/HAWAII_PROJECT/Automation/SmokeTest/Smoke-Test-Suite/Smoke-Test-Suite/Scenario-4-LifeRay-ECM/Step1-KOLEA-Public-Portal-Doc-Upload-Page.html"
+URL_Review_Declare         =        "file:///C:/Users/giriganv/OneDrive%20-%20Unisys/HAWAII_PROJECT/Xpaths/KOLEA-Public-Review-Declare-File/KOLEA-Public-Review-Declare-File.htm"
+
 #*****************************************************************************************#
 #                                          File Name                                      #
 #*****************************************************************************************#
@@ -1037,9 +1040,17 @@ Path_PP_Doc_Upload_Page_Terms_And_Conditions 								= 	"//input[@id='agreeCheck
 Path_PP_Doc_Upload_Page_Cancel 												=   "//input[@title='Cancel']"
 Path_PP_Doc_Upload_Page_Upload 												=   "//input[@type='submit']"
 
-
-
-########################Siebel
+##########################Locators-Id,Name,CSS-Review,And Declare File
+Path_LFR_RS_Yes_Rnew_Elig_Nxt												=    "renewal_app"
+Path_LFR_RS_Does_Parnt_livng_Out_Hme_Yes									=    "nuyo"
+Path_LFR_RS_Does_Parnt_livng_Out_Hme_No										=    "mneu"
+Path_LFR_RS_Agree_T_C                                                        =    "agreeCheckbox"
+Path_LFR_RS_Sign_Prim_App_FName												=    "SignatureFirstName"
+Path_LFR_RS_Sign_Prim_App_LName												=    "SignatureLastName"
+Path_LFR_RS_Save_Exit_Btn													=    "finishApplicationFormSaveAndExitId"
+Path_LFR_RS_Back_Btn														=    "css=input[value=Back]"
+Path_LFR_RS_Review_Btn														=    "finishApplicationFormReviewId"
+########################Siebel 
 
 Path_KOLEA_Sign_On_Username         =    "//input[@name='userid']"
 Path_Signon_Page_Continue_button    =    "//input[@class='loginButton']"
@@ -1092,6 +1103,7 @@ Random_Password                     =  _get_strong_password()
 ##################### Dates and times
 
 Today_mm_dd_ccyy                   =    _get_today_mm_dd_ccyy()
+
 
 
 
