@@ -7,7 +7,8 @@ ReviewAndDeclareFile
    Open Browser                 ${URL_Review_Declare}                       ${BROWSER_Chrome}
    Maximize window
    Click Element                ${Path_LFR_RS_Yes_Rnew_Elig_Nxt}
-   Select From List By Index    ${Path_LFR_RS_Yes_Rnew_Elig_Nxt}            5
+   Select From List By Index    ${Path_LFR_RS_Yes_Rnew_Elig_Nxt}     5           
+   #Click Element                ${Path_LFR_RS_Does_Parnt_livng_Out_Hme_Yes}    
    Click Element                ${Path_LFR_RS_Does_Parnt_livng_Out_Hme_No}
    Click Element                ${Path_LFR_RS_Agree_T_C}
    Input Text                   ${Path_LFR_RS_Sign_Prim_App_FName}          ${Random_First_Name}

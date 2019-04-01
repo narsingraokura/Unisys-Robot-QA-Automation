@@ -1042,8 +1042,8 @@ Path_PP_Doc_Upload_Page_Upload 												=   "//input[@type='submit']"
 
 ##########################Locators-Id,Name,CSS-Review,And Declare File
 Path_LFR_RS_Yes_Rnew_Elig_Nxt												=    "renewal_app"
-Path_LFR_RS_Does_Parnt_livng_Out_Hme_Yes									=    "nuyo"
-Path_LFR_RS_Does_Parnt_livng_Out_Hme_No										=    "mneu"
+#Path_LFR_RS_Does_Parnt_livng_Out_Hme_Yes									=    "css=input[value=true]"
+Path_LFR_RS_Does_Parnt_livng_Out_Hme_No										=    "css=input[value=false]"
 Path_LFR_RS_Agree_T_C                                                        =    "agreeCheckbox"
 Path_LFR_RS_Sign_Prim_App_FName												=    "SignatureFirstName"
 Path_LFR_RS_Sign_Prim_App_LName												=    "SignatureLastName"
