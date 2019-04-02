@@ -179,6 +179,64 @@ URL_AuthorizedRep          =        "file:///C:/Users/giriganv/OneDrive%20-%20Un
 URL_ECMUpload			   =		"file:///C:/Users/giriganv/OneDrive%20-%20Unisys/HAWAII_PROJECT/Automation/SmokeTest/Smoke-Test-Suite/Smoke-Test-Suite/Scenario-4-LifeRay-ECM/Step1-KOLEA-Public-Portal-Doc-Upload-Page.html"
 URL_Review_Declare         =        "file:///C:/Users/giriganv/OneDrive%20-%20Unisys/HAWAII_PROJECT/Xpaths/KOLEA-Public-Review-Declare-File/KOLEA-Public-Review-Declare-File.htm"
 
+
+DEV02_Worker_Portal 	   = 		"https://dev02cm.dhsie.hawaii.gov/epublicsector_enu"
+DEV02_SSD_Portal           = 		"https://dev02cm.dhsie.hawaii.gov/group/ssd/search"
+DEV02_Public_Portal        =   		"https://dev02web.dhsie.hawaii.gov/web/kolea/home-page"
+DEV02_OBIEE_Analytics      =        "https://dev02cm.dhsie.hawaii.gov/analytics"
+DEV02_ECM				   =		"https://dev02.ecm.statehub.hawaii.gov/navigator/?desktop=KIESWorker"
+DEV02_DataCap              =        "https://dev02.ecm.statehub.hawaii.gov/navigator/?desktop=DCKOLEA"
+
+PSD03_Worker_Portal 	   = 		"https://psd03cm.dhsie.hawaii.gov/epublicsector_enu"
+PSD03_SSD_Portal           = 		"https://psd03cm.dhsie.hawaii.gov/group/ssd/search"
+PSD03_Public_Portal        =   		"https://psd03web.dhsie.hawaii.gov/web/kolea/home-page"
+PSD03_OBIEE_Analytics      =        "https://psd03cm.dhsie.hawaii.gov/analytics"
+PSD03_ECM				   =		"https://psd03.ecm.statehub.hawaii.gov/navigator/?desktop=KIESWorker"
+PSD03_DataCap  			   =        "http://psd03vdcap01.dhsie.hawaii.gov/tmweb.net/"
+
+UAT02_Worker_Portal 	   = 		"https://uat02cm.dhsie.hawaii.gov/epublicsector_enu"
+UAT02_SSD_Portal           = 		"https://uat02cm.dhsie.hawaii.gov/group/ssd/search"
+UAT02_Public_Portal        =   		"https://uat02web.dhsie.hawaii.gov/web/kolea/home-page"
+UAT02_OBIEE_Analytics      =        "https://uat02cm.dhsie.hawaii.gov/analytics"
+UAT02_ECM				   =		"https://uat02.ecm.statehub.hawaii.gov/navigator/?desktop=KIESWorker"
+UAT02_DataCap  			   =        "https://uat02.ecm.statehub.hawaii.gov/navigator/?desktop=DCKOLEA"
+
+
+UAT03_Worker_Portal 	   = 		"https://uat03cm.dhsie.hawaii.gov/epublicsector_enu"
+UAT03_SSD_Portal           = 		"https://uat03cm.dhsie.hawaii.gov/group/ssd/search"
+UAT03_Public_Portal        =   		"https://uat03web.dhsie.hawaii.gov/web/kolea/home-page"
+UAT03_OBIEE_Analytics      =        "https://uat03cm.dhsie.hawaii.gov/analytics"
+UAT03_ECM				   =		"https://uat03.ecm.statehub.hawaii.gov/navigator/?desktop=KIESWorker"
+UAT03_DataCap  			   =        "https://uat03.ecm.statehub.hawaii.gov/navigator/?desktop=DCKOLEA"
+
+STG02_Worker_Portal 	   = 		"https://stg02cm.dhsie.hawaii.gov/epublicsector_enu"
+STG02_SSD_Portal           = 		"https://stg02cm.dhsie.hawaii.gov/group/ssd/search"
+STG02_Public_Portal        =   		"https://stg02web.dhsie.hawaii.gov/web/kolea/home-page"
+STG02_OBIEE_Analytics      =        "https://stg02cm.dhsie.hawaii.gov/analytics"
+STG02_ECM				   =		"https://stg02.ecm.statehub.hawaii.gov/navigator/?desktop=KIESWorker"
+STG02_DataCap  			   =        "http://stg02.scan.statehub.hawaii.gov/tmweb.net/"
+
+SIT01_Worker_Portal 	   = 		"https://sit01cm.dhsie.hawaii.gov/epublicsector_enu"
+SIT01_SSD_Portal           = 		"https://sit01cm.dhsie.hawaii.gov/group/ssd/search"
+SIT01_Public_Portal        =   		"https://sit01web.dhsie.hawaii.gov/web/kolea/home-page"
+SIT01_OBIEE_Analytics      =        "https://sit01cm.dhsie.hawaii.gov/analytics"
+SIT01_ECM				   =		"https://sit01.ecm.statehub.hawaii.gov/navigator/?desktop=KIESWorker"
+SIT01_DataCap  			   =        "https://sit01.ecm.statehub.hawaii.gov/navigator/?desktop=DCKOLEA"
+
+SIT02_Worker_Portal 	   = 		"https://sit02cm.dhsie.hawaii.gov/epublicsector_enu"
+SIT02_SSD_Portal           = 		"https://sit02cm.dhsie.hawaii.gov/group/ssd/search"
+SIT02_Public_Portal        =   		"https://sit02web.dhsie.hawaii.gov/web/kolea/home-page"
+SIT02_OBIEE_Analytics      =        "https://sit02cm.dhsie.hawaii.gov/analytics"
+SIT02_ECM				   =		"https://sit02.ecm.statehub.hawaii.gov/navigator/?desktop=KIESWorker"
+SIT02_DataCap  			   =        "http://sit02vdcap01.dhsie.hawaii.gov/tmweb.net/"
+
+TRN02_Worker_Portal 	   = 		"https://trn02cm.dhsie.hawaii.gov/epublicsector_enu"
+TRN02_SSD_Portal           = 		"https://trn02cm.dhsie.hawaii.gov/group/ssd/search"
+TRN02_Public_Portal        =   		"https://trn02web.dhsie.hawaii.gov/web/kolea/home-page"
+TRN02_OBIEE_Analytics      =        "https://trn02cm.dhsie.hawaii.gov/analytics"
+TRN02_ECM				   =		"https://trn02.ecm.statehub.hawaii.gov/navigator/?desktop=KIESWorker"
+TRN02_DataCap  			   =        "http://trn02vdcap01.dhsie.hawaii.gov/tmweb.net/"
+
 #*****************************************************************************************#
 #                                          File Name                                      #
 #*****************************************************************************************#
